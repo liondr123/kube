@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: ichte/swarmtest:node
+        image: httpd 
         resources:
           limits:
             memory: "128Mi"
