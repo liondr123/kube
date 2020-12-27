@@ -1,0 +1,13 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: deployapp
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: deployapp
+  minReplicas: 3
+  maxReplicas: 5
+  # Thực hiện scale CPU hoạt động ở 80% so với CPU mà POD yêu cầu
+  targetCPUUtilizationPercentage: 80
