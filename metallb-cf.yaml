@@ -9,4 +9,4 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 192.168.1.240-192.168.1.250 <= Select the range you want.
+      - 192.168.1.10-192.168.1.250 <= Select the range you want.
