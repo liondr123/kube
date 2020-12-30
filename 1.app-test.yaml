@@ -33,7 +33,7 @@ spec:
         run: http-test-app
     spec:
       containers:
-      - image: nginx
+      - image: ichte/swarmtest:node
         imagePullPolicy: IfNotPresent
         name: http
         ports:
