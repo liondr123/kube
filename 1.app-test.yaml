@@ -37,6 +37,6 @@ spec:
         imagePullPolicy: IfNotPresent
         name: http
         ports:
-        - containerPort: 80
+        - containerPort: 8085
           protocol: TCP
         resources: {}
