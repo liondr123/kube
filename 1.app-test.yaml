@@ -23,7 +23,7 @@ metadata:
   # Deploy này tạo tại namespace có Haproxy Ingress
   namespace: ingress-controller
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       run: http-test-app
