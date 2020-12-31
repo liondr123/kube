@@ -6,7 +6,7 @@ metadata:
 spec:
   rules:
     # Tên miền truy cập
-  - host: xuanthulab.test
+  - host: test.test
     http:
       paths:
       - path: /
