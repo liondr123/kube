@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # tên của deployment
+  name: deploySamba
+spec:
+  # số POD tạo ra
+  replicas: 1
+
+  # thiết lập các POD do deploy quản lý, là POD có nhãn  "app=deployapp"
+  selector:
+    matchLabels:
+      app: deploySamba
+
+  # Định nghĩa mẫu POD, khi cần Deploy sử dụng mẫu này để tạo Pod
+  template:
+    metadata:
+      name: podSamba
+      labels:
+        app: deploySamba
+    spec:
+      containers:
+      - name: samba
+        image: ichte/samba 
+      environment:
+        smbuser: user
+        password: 123456
+        ports:
+          - containerPort: 139
